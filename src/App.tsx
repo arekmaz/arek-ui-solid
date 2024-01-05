@@ -6,7 +6,7 @@ import { Inputs } from "./demo/input.stories";
 function App() {
   return (
     <Center className="w-screen flex-1">
-      <p class="text-2xl">Arek UI - Solid</p>
+      <p class="text-2xl text-center font-semibold">Arek UI - Solid</p>
       <VStack
         spacing={5}
         className="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
