@@ -9,6 +9,7 @@ export default {
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
     "src/**/*.{js,jsx,ts,tsx}",
+    "index.html",
   ],
   theme: {
     container: {
