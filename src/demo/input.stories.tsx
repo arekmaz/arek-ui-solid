@@ -56,7 +56,7 @@ export const Inputs = () => {
 
       <label>
         Error
-        <Input status="error" defaultValue="error" />
+        <Input status="error" value="error" />
       </label>
 
       <label>

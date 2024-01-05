@@ -1,4 +1,4 @@
-import { Component, ComponentProps, mergeProps, splitProps } from "solid-js";
+import { Component, mergeProps, splitProps } from "solid-js";
 import { VariantProps } from "tailwind-variants";
 import { cn } from "./cn";
 
