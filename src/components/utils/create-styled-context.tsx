@@ -50,16 +50,15 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
       unstyled?: boolean;
     }
   > => {
-    const StyledComponent = ({
-      classes = {},
-      unstyled = false,
-      ...props
-    }: P & {
-      classes?: Classes<R>;
-      unstyled?: boolean;
-    }) => {
+    const StyledComponent = (
+      props: P & {
+        classes?: Classes<R>;
+        unstyled?: boolean;
+      }
+    ) => {
+      const [hocProps, compProps] = splitProps(props, ["classes", "unstyled"]);
       const [variantProps, otherProps] = splitProps(
-        mergeProps(defaultProps, props),
+        mergeProps(defaultProps, compProps),
         recipe.variantKeys as any
       );
 
@@ -68,17 +67,21 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
 
       return (
         <StyleContext.Provider
-          value={{ slotStyles: slotStyles as any, classes, unstyled }}
+          value={{
+            slotStyles: slotStyles as any,
+            classes: hocProps.classes ?? {},
+            unstyled: hocProps.unstyled,
+          }}
         >
           <C
             as
             any
             {...otherProps}
             className={
-              unstyled
-                ? (props as any).class
+              hocProps.unstyled
+                ? (otherProps as any).class
                 : (slotStyles as any)[slot]({
-                    class: cn(classes[slot], (props as any).class),
+                    class: cn(hocProps.classes?.[slot], (props as any).class),
                   })
             }
           />
@@ -94,18 +97,18 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
     slot: StyleSlot<R>,
     defaultProps?: Partial<P>
   ): Component<P & { unstyled?: boolean }> => {
-    const StyledComponent = ({
-      unstyled: unstyledProp,
-      ...props
-    }: P & { unstyled?: boolean }) => {
+    const StyledComponent = (props: P & { unstyled?: boolean }) => {
       const { slotStyles, classes, unstyled } = useContext(StyleContext) as any;
+      const [hocProps, compProps] = splitProps(props, ["unstyled"]);
+
       const C = Comp as any;
-      const allProps = mergeProps(defaultProps, props, {
+
+      const allProps = mergeProps(defaultProps, compProps, {
         class:
-          unstyled || unstyledProp
-            ? (props as any).class
+          unstyled || hocProps.unstyled
+            ? (compProps as any).class
             : slotStyles?.[slot]({
-                className: cn(classes[slot], (props as any).class),
+                className: cn(classes[slot], (compProps as any).class),
               }),
       });
 
