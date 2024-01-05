@@ -11,6 +11,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  lucide-solid:
+    specifier: ^0.306.0
+    version: 0.306.0(solid-js@1.8.8)
   solid-js:
     specifier: ^1.8.7
     version: 1.8.8
@@ -1905,6 +1908,14 @@ packages:
     dependencies:
       yallist: 3.1.1
     dev: true
+
+  /lucide-solid@0.306.0(solid-js@1.8.8):
+    resolution: {integrity: sha512-Xnbdisv2IfSQreEvLgM9Rr7J2tEACfCDJWxYBGWMJPMyPbwdzPdQDFOG7dMZMGCK0nwI8LspVoMPX53qs5i5Eg==}
+    peerDependencies:
+      solid-js: ^1.4.7
+    dependencies:
+      solid-js: 1.8.8
+    dev: false
 
   /merge-anything@5.1.7:
     resolution: {integrity: sha512-eRtbOb1N5iyH0tkQDAoQ4Ipsp/5qSR79Dzrz8hEPxRX10RWWR/iQXdoKmBSRCThY1Fh5EhISDtpSc93fpxUniQ==}

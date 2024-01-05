@@ -8,8 +8,9 @@ type StyleRecipe = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   variantKeys: (string | number)[];
 };
+type StyleVariantProps<R extends StyleRecipe> = Parameters<R>[0];
 
-export const styled = <Props extends { class?: string }, R extends StyleRecipe>(
+export const styled = <Props, R extends StyleRecipe>(
   Component: Component<Props>,
   recipe: R,
   defaultProps?: Partial<Props & VariantProps<R>>
@@ -17,7 +18,7 @@ export const styled = <Props extends { class?: string }, R extends StyleRecipe>(
   const Comp = ({
     unstyled,
     ...props
-  }: ComponentProps<Component<Props>> & { unstyled?: boolean }) => {
+  }: Props & StyleVariantProps<R> & { unstyled?: boolean }) => {
     const [variantProps, otherProps] = splitProps(
       mergeProps(defaultProps, props),
       recipe.variantKeys as any
@@ -26,7 +27,9 @@ export const styled = <Props extends { class?: string }, R extends StyleRecipe>(
     const classNames = recipe(variantProps);
 
     const componentProps = mergeProps(otherProps, {
-      class: unstyled ? props.class : cn(classNames, (props as any).class),
+      class: unstyled
+        ? (props as any).class
+        : cn(classNames, (props as any).class),
     } as any);
 
     return <Component {...componentProps} />;
