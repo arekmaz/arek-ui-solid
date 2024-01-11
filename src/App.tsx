@@ -15,6 +15,7 @@ import { InputGroups } from "./demo/input-group.stories";
 import { Alerts } from "./demo/alert.stories";
 import { Dialogs } from "./demo/dialog.stories";
 import { Avatars } from "./demo/avatar.stories";
+import { Badges } from "./demo/badge.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -46,7 +47,7 @@ function App() {
         <Alerts />
         <Dialogs />
         <Avatars />
-        {/* <Badges /> */}
+        <Badges />
         {/* <Calendars /> */}
         {/* <Cards /> */}
         {/* <Collapsibles /> */}
