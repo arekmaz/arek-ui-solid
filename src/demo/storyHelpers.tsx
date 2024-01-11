@@ -1,8 +1,8 @@
-import { Tooltip } from "@ark-ui/solid";
 import { GithubIcon } from "lucide-solid";
 import { Card, CardProps } from "../components/ui/card";
 import { IconButton } from "../components/ui/icon-button";
 import { HStack, VStack } from "../components/ui/stack";
+import { Tooltip } from "../components/ui/tooltip";
 
 export const Story = ({
   title,
