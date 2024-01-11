@@ -19,6 +19,8 @@ import { Badges } from "./demo/badge.stories";
 import { Cards } from "./demo/card.stories";
 import { TagsInputs } from "./demo/tags-input.stories";
 import { HoverCards } from "./demo/hover-card.stories";
+import { Drawers } from "./demo/drawer.stories";
+import { Menus } from "./demo/menu.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -54,8 +56,8 @@ function App() {
         <Cards />
         <TagsInputs />
         <HoverCards />
-        {/* <Drawers /> */}
-        {/* <Menus /> */}
+        <Drawers />
+        <Menus />
         {/* <Paginations /> */}
         {/* <Popovers /> */}
         {/* <RadioGroups /> */}
