@@ -1,7 +1,7 @@
 import { ChevronDownIcon } from "lucide-solid";
 import { Accordion } from "../components/ui/accordion";
 import { Card } from "../components/ui/card";
-import { Story } from "../components/storyHelpers";
+import { Story } from "./storyHelpers";
 import { For } from "solid-js";
 
 const Single = () => {

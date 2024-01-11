@@ -1,9 +1,9 @@
-import { Story } from "../components/storyHelpers";
+import { Story } from "./storyHelpers";
 import { Input } from "../components/ui/input";
 
 export const Inputs = () => {
   return (
-    <Story title="inputs">
+    <Story title="inputs" componentFilename="input">
       <label>
         Input
         <Input placeholder="Enter email" />

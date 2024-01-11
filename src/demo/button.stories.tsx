@@ -1,5 +1,5 @@
 import { Loader2, Mail } from "lucide-solid";
-import { Story } from "../components/storyHelpers";
+import { Story } from "./storyHelpers";
 import {
   Button,
   ButtonDestructive,
@@ -11,7 +11,7 @@ import {
 
 export const Buttons = () => {
   return (
-    <Story title="buttons">
+    <Story title="buttons" componentFilename="button">
       <Button>Primary</Button>
       <ButtonSecondary>Secondary</ButtonSecondary>
       <ButtonGhost>Ghost</ButtonGhost>

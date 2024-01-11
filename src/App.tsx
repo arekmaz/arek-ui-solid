@@ -7,6 +7,8 @@ import { Comboboxes } from "./demo/combobox.stories";
 import { Inputs } from "./demo/input.stories";
 import { IconButtons } from "./demo/icon-button.stories";
 import { Accordions } from "./demo/accordion.stories";
+import { Tooltips } from "./demo/tooltip.stories";
+import { Checkboxes } from "./demo/checkbox.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -27,7 +29,7 @@ function App() {
         class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
       >
         <Buttons />
-        {/* <Checkboxes /> */}
+        <Checkboxes />
         <Comboboxes />
         {/* <Selects /> */}
         {/* <DatePickers /> */}
@@ -57,7 +59,7 @@ function App() {
         {/* <Switches /> */}
         {/* <Textareas /> */}
         {/* <TabsStories /> */}
-        {/* <Tooltips /> */}
+        <Tooltips />
         {/* <Toasts /> */}
         {/* <Sliders /> */}
         {/* <Spinners /> */}

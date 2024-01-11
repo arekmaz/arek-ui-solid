@@ -16,7 +16,7 @@ import {
   ArchiveXIcon,
 } from "lucide-solid";
 import { IconButton } from "../components/ui/icon-button";
-import { Story } from "../components/storyHelpers";
+import { Story } from "./storyHelpers";
 import { For } from "solid-js";
 
 export const IconButtons = () => {

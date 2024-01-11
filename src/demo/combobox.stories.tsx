@@ -2,7 +2,7 @@ import { ChevronsUpDownIcon, ArrowRight } from "lucide-solid";
 import { matchSorter } from "match-sorter";
 import { createSignal } from "solid-js";
 import { Combobox as C } from "../components/ui/combobox";
-import { Story } from "../components/storyHelpers";
+import { Story } from "./storyHelpers";
 import { InputGroup } from "../components/ui/input-group";
 import { cn } from "../components/utils/cn";
 import { Portal } from "solid-js/web";
@@ -270,7 +270,7 @@ export const WithInputGroup = () => {
 
 export const Comboboxes = () => {
   return (
-    <Story title="comboboxes">
+    <Story title="comboboxes" componentFilename="combobox">
       <SingleCombobox />
       <OpenOnClickCombobox />
       <MultipleCombobox />
