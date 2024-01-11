@@ -13,6 +13,7 @@ import { Selects } from "./demo/select.stories";
 import { DatePickers } from "./demo/date-picker.stories";
 import { InputGroups } from "./demo/input-group.stories";
 import { Alerts } from "./demo/alert.stories";
+import { Dialogs } from "./demo/dialog.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -42,7 +43,7 @@ function App() {
         <InputGroups />
         <Accordions />
         <Alerts />
-        {/* <Dialogs /> */}
+        <Dialogs />
         {/* <Avatars /> */}
         {/* <Badges /> */}
         {/* <Calendars /> */}

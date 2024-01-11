@@ -206,11 +206,7 @@ export const WithGroupInput = () => {
       <Portal>
         <S.Positioner>
           <S.Content>
-            <InputGroup
-              asChild
-              variant="ghost"
-              className="px-2 py-1 border-b h-10"
-            >
+            <InputGroup asChild variant="ghost" class="px-2 py-1 border-b h-10">
               <HStack>
                 <InputGroup.LeftAddon>
                   <SearchIcon />
