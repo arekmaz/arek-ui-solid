@@ -18,6 +18,7 @@ import { Avatars } from "./demo/avatar.stories";
 import { Badges } from "./demo/badge.stories";
 import { Cards } from "./demo/card.stories";
 import { TagsInputs } from "./demo/tags-input.stories";
+import { HoverCards } from "./demo/hover-card.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -52,8 +53,7 @@ function App() {
         <Badges />
         <Cards />
         <TagsInputs />
-        {/* <ContextMenus /> */}
-        {/* <HoverCards /> */}
+        <HoverCards />
         {/* <Drawers /> */}
         {/* <Menus /> */}
         {/* <Paginations /> */}
@@ -75,6 +75,7 @@ function App() {
         {/* react only at the moment */}
         {/* <Calendars /> */}
         {/* <Collapsibles /> */}
+        {/* <ContextMenus /> */}
       </VStack>
     );
   };
