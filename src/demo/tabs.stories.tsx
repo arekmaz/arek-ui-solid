@@ -52,7 +52,7 @@ export const CustomIndicator = () => {
     { id: "react", label: "React" },
     { id: "solid", label: "Solid" },
     { id: "svelte", label: "Svelte" },
-    { id: "vue", label: "Vue" },
+    { id: "vue", label: "Vue", disabled: false },
   ];
   return (
     <Card>

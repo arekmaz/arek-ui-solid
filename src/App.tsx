@@ -29,6 +29,7 @@ import { ToggleGroups } from "./demo/toggle-group.stories";
 import { Switches } from "./demo/switch.stories";
 import { Textareas } from "./demo/textarea.stories";
 import { TabsStories } from "./demo/tabs.stories";
+import { Toasts } from "./demo/toast.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -75,7 +76,7 @@ function App() {
         <Textareas />
         <TabsStories />
         <Tooltips />
-        {/* <Toasts /> */}
+        <Toasts />
         {/* <Sliders /> */}
         {/* <Spinners /> */}
         {/* <Tables /> */}
