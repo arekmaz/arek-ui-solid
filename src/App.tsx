@@ -21,6 +21,7 @@ import { TagsInputs } from "./demo/tags-input.stories";
 import { HoverCards } from "./demo/hover-card.stories";
 import { Drawers } from "./demo/drawer.stories";
 import { Menus } from "./demo/menu.stories";
+import { Paginations } from "./demo/pagination.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -58,7 +59,7 @@ function App() {
         <HoverCards />
         <Drawers />
         <Menus />
-        {/* <Paginations /> */}
+        <Paginations />
         {/* <Popovers /> */}
         {/* <RadioGroups /> */}
         {/* <ScrollAreas /> */}
