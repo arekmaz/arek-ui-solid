@@ -12,6 +12,7 @@ import { Checkboxes } from "./demo/checkbox.stories";
 import { Selects } from "./demo/select.stories";
 import { DatePickers } from "./demo/date-picker.stories";
 import { InputGroups } from "./demo/input-group.stories";
+import { Alerts } from "./demo/alert.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -40,7 +41,7 @@ function App() {
         <Inputs />
         <InputGroups />
         <Accordions />
-        {/* <Alerts /> */}
+        <Alerts />
         {/* <Dialogs /> */}
         {/* <Avatars /> */}
         {/* <Badges /> */}
