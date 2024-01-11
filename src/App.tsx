@@ -26,6 +26,9 @@ import { Popovers } from "./demo/popover.stories";
 import { RadioGroups } from "./demo/radio-group.stories";
 import { Skeletons } from "./demo/skeleton.stories";
 import { ToggleGroups } from "./demo/toggle-group.stories";
+import { Switches } from "./demo/switch.stories";
+import { Textareas } from "./demo/textarea.stories";
+import { TabsStories } from "./demo/tabs.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -68,9 +71,9 @@ function App() {
         <RadioGroups />
         <Skeletons />
         <ToggleGroups />
-        {/* <Switches /> */}
-        {/* <Textareas /> */}
-        {/* <TabsStories /> */}
+        <Switches />
+        <Textareas />
+        <TabsStories />
         <Tooltips />
         {/* <Toasts /> */}
         {/* <Sliders /> */}
