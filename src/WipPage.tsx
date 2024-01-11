@@ -2,8 +2,6 @@ import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 import { Show, createEffect, createSignal } from "solid-js";
 import { IconButton } from "./components/ui/icon-button";
 import { Center, HStack, VStack } from "./components/ui/stack";
-import { Selects } from "./demo/select.stories";
-import { TabsStories } from "./demo/tabs.stories";
 import { Spinners } from "./demo/spinner.stories";
 
 export function WipPage() {
