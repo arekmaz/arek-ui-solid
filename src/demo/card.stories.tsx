@@ -1,4 +1,4 @@
-import { Portal } from "solid-js/web";
+import { Portal, For } from "solid-js/web";
 import { ChevronsUpDownIcon } from "lucide-solid";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
@@ -40,15 +40,17 @@ const Basic = () => {
                         class="pointer-events-auto"
                       />
                       <Select.ItemGroup id="framework">
-                        <Select.ItemGroupLabel htmlFor="framework">
+                        <Select.ItemGroupLabel for="framework">
                           Frameworks
                         </Select.ItemGroupLabel>
-                        {data.map((item) => (
-                          <Select.Item key={item.value} item={item}>
-                            <Select.ItemText>{item.label}</Select.ItemText>
-                            <Select.ItemIndicator>✓</Select.ItemIndicator>
-                          </Select.Item>
-                        ))}
+                        <For each={data}>
+                          {(item) => (
+                            <Select.Item item={item}>
+                              <Select.ItemText>{item.label}</Select.ItemText>
+                              <Select.ItemIndicator>✓</Select.ItemIndicator>
+                            </Select.Item>
+                          )}
+                        </For>
                       </Select.ItemGroup>
                     </Select.Content>
                   </Select.Positioner>
