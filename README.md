@@ -1,28 +1,32 @@
-## Usage
+# Arek UI: [tailwindCSS](https://tailwindcss.com/) + [Ark UI](https://ark-ui.com/)
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+## Copy paste components to your project.
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+## Supported frameworks:
 
-## Available Scripts
+### React https://arek-ui.fly.dev/
 
-In the project directory, you can run:
+### SolidJs https://arek-ui-solid.fly.dev/
 
-### `npm run dev`
+## Inspired by:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+https://ui.shadcn.com/
 
-### `npm run build`
+https://park-ui.com/
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+https://chakra-ui.com/
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Setup:
 
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
+- React:
+- setup tailwind css - https://tailwindcss.com/docs/installation
+- copy over the [tailwind config](tailwind.config.ts)
+- copy over the [utils folder](/app/components/utils/), it contains three key files:
+  - [cn](/app/components/utils/cn.ts) - merges tailwind class names
+  - [styled](/app/components/utils/styled.tsx) - wraps a component in a tailwind variants recipe and adds a new `unstyled` prop
+  - [create-styled-context](/app/components/utils/create-styled-context.tsx) - wraps root component and its slots in a tailwind variants recipe, adds `classes` and `unstyled` props to the root, and `unstyled` prop to the child slots
+- use the [base css for tailwind](/app/tailwind.css)
+- `install --dev tailwind-animate @savvywombat/tailwindcss-grid-areas`
+- `install @ark-ui/react clsx tailwind-variants tailwind-merge`
+- the default icons used are `lucide-react`, you need to install those for some components
+- some components require individual dependencies like `@radix-ui/react-aspect-ratio`, `match-sorter` or `react-day-picker`, you need to install those to use them
