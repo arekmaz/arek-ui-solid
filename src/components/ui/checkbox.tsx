@@ -50,9 +50,9 @@ const II = (props: ComponentProps<"svg">) => (
     <path
       d="M2.91675 7H11.0834"
       stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 );
