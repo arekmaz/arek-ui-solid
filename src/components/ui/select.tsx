@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Select as S, useSelectContext, ark } from "@ark-ui/solid";
-import { ComponentProps } from "solid-js";
+import { ComponentProps, createEffect } from "solid-js";
 import { tv } from "tailwind-variants";
 import { createStyleContext } from "../utils/create-styled-context";
 import { inputClasses } from "./input";
@@ -153,18 +153,16 @@ const Indicator = withContext(S.Indicator, "indicator");
 export const AutoFocusingFilterInput = (
   props: ComponentProps<typeof FilterInput>
 ) => {
-  let filterInputRef;
+  let filterInputRef: HTMLInputElement | undefined;
   const context = useSelectContext();
 
-  console.log({ context });
-
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     setTimeout(() => {
-  //       filterInputRef.current?.focus();
-  //     }, 0);
-  //   }
-  // }, [isOpen, value]);
+  createEffect(() => {
+    if (context().isOpen) {
+      setTimeout(() => {
+        filterInputRef?.focus();
+      }, 0);
+    }
+  });
 
   return <FilterInput tabIndex={0} {...props} ref={filterInputRef} />;
 };
