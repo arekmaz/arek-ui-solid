@@ -8,6 +8,7 @@ import {
   Component,
 } from "solid-js";
 import { cn } from "./cn";
+import { Dynamic } from "solid-js/web";
 
 type GenericProps = Record<string, unknown>;
 type StyleRecipe = {
@@ -65,6 +66,8 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
       const slotStyles = recipe(variantProps);
       const C = Comp as any;
 
+      console.log({ hocProps, compProps });
+
       return (
         <StyleContext.Provider
           value={{
@@ -96,21 +99,25 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
     defaultProps?: Partial<P>
   ): Component<P & { unstyled?: boolean }> => {
     const StyledComponent = (props: P & { unstyled?: boolean }) => {
-      const { slotStyles, classes, unstyled } = useContext(StyleContext) as any;
-      const [hocProps, compProps] = splitProps(props, ["unstyled"]);
+      const ctx = useContext(StyleContext) as any;
+      const merged = mergeProps(defaultProps, props);
+
+      const [hocProps, compProps] = splitProps(merged, ["unstyled"]);
 
       const C = Comp as any;
 
-      const allProps = mergeProps(defaultProps, compProps, {
-        class:
-          unstyled || hocProps.unstyled
-            ? (compProps as any).class
-            : slotStyles?.[slot]({
-                class: cn(classes[slot], (compProps as any).class),
-              }),
-      });
+      console.log({ classes: ctx.classes });
 
-      return <C {...allProps} />;
+      const allProps = mergeProps(compProps, {
+        class:
+          ctx.unstyled || hocProps.unstyled
+            ? (compProps as any).class
+            : ctx.slotStyles?.[slot]({
+                class: cn(ctx.classes[slot], (compProps as any).class),
+              }),
+      }) as any;
+
+      return <Dynamic component={C} {...allProps} />;
     };
 
     return StyledComponent as any;
