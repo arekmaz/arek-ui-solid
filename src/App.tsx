@@ -22,6 +22,9 @@ import { HoverCards } from "./demo/hover-card.stories";
 import { Drawers } from "./demo/drawer.stories";
 import { Menus } from "./demo/menu.stories";
 import { Paginations } from "./demo/pagination.stories";
+import { Popovers } from "./demo/popover.stories";
+import { RadioGroups } from "./demo/radio-group.stories";
+import { Skeletons } from "./demo/skeleton.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -60,11 +63,9 @@ function App() {
         <Drawers />
         <Menus />
         <Paginations />
-        {/* <Popovers /> */}
-        {/* <RadioGroups /> */}
-        {/* <ScrollAreas /> */}
-        {/* <Separators /> */}
-        {/* <Skeletons /> */}
+        <Popovers />
+        <RadioGroups />
+        <Skeletons />
         {/* <ToggleGroups /> */}
         {/* <Switches /> */}
         {/* <Textareas /> */}
@@ -79,6 +80,8 @@ function App() {
         {/* <Calendars /> */}
         {/* <Collapsibles /> */}
         {/* <ContextMenus /> */}
+        {/* <ScrollAreas /> */}
+        {/* <Separators /> */}
       </VStack>
     );
   };
