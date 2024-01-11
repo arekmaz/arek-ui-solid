@@ -14,6 +14,7 @@ import { DatePickers } from "./demo/date-picker.stories";
 import { InputGroups } from "./demo/input-group.stories";
 import { Alerts } from "./demo/alert.stories";
 import { Dialogs } from "./demo/dialog.stories";
+import { Avatars } from "./demo/avatar.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -44,7 +45,7 @@ function App() {
         <Accordions />
         <Alerts />
         <Dialogs />
-        {/* <Avatars /> */}
+        <Avatars />
         {/* <Badges /> */}
         {/* <Calendars /> */}
         {/* <Cards /> */}
