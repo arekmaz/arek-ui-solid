@@ -27,6 +27,6 @@ https://chakra-ui.com/
   - [create-styled-context](/app/components/utils/create-styled-context.tsx) - wraps root component and its slots in a tailwind variants recipe, adds `classes` and `unstyled` props to the root, and `unstyled` prop to the child slots
 - use the [base css for tailwind](/app/tailwind.css)
 - `install -D tailwind-animate @savvywombat/tailwindcss-grid-areas`
-- `install @ark-ui/react clsx tailwind-variants tailwind-merge`
-- the default icons used are `lucide-react`, you need to install those for some components
-- some components require individual dependencies like `@radix-ui/react-aspect-ratio`, `match-sorter` or `react-day-picker`, you need to install those to use them
+- `install @ark-ui/solid clsx tailwind-variants tailwind-merge`
+- the default icons used are `lucide-solid`, you need to install those for some components
+- some components require individual dependencies, you need to install those to use them
