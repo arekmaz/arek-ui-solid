@@ -30,6 +30,7 @@ import { Switches } from "./demo/switch.stories";
 import { Textareas } from "./demo/textarea.stories";
 import { TabsStories } from "./demo/tabs.stories";
 import { Toasts } from "./demo/toast.stories";
+import { Sliders } from "./demo/slider.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -77,7 +78,7 @@ function App() {
         <TabsStories />
         <Tooltips />
         <Toasts />
-        {/* <Sliders /> */}
+        <Sliders />
         {/* <Spinners /> */}
         {/* <Tables /> */}
 

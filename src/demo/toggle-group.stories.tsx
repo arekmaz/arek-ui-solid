@@ -19,7 +19,7 @@ export const Demo = (props: ComponentProps<typeof ToggleGroup>) => {
     <Stack
       direction={props.orientation === "horizontal" ? "row" : "column"}
       spacing={3}
-      className={cn("rounded-md")}
+      class={cn("rounded-md")}
     >
       {props.variant ?? "outline"}
       <ToggleGroup.Root multiple {...props}>
