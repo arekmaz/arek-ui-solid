@@ -9,6 +9,7 @@ import { IconButtons } from "./demo/icon-button.stories";
 import { Accordions } from "./demo/accordion.stories";
 import { Tooltips } from "./demo/tooltip.stories";
 import { Checkboxes } from "./demo/checkbox.stories";
+import { Selects } from "./demo/select.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -31,7 +32,7 @@ function App() {
         <Buttons />
         <Checkboxes />
         <Comboboxes />
-        {/* <Selects /> */}
+        <Selects />
         {/* <DatePickers /> */}
         <IconButtons />
         <Inputs />
