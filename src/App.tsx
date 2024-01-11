@@ -68,7 +68,7 @@ function App() {
 
   return (
     <Center class="w-screen flex-1">
-      <p class="text-2xl text-center font-semibold">Arek UI - Solid {mode()}</p>
+      <p class="text-2xl text-center font-semibold">Arek UI - Solid</p>
       {renderComponents()}
       <HStack
         class="fixed bottom-0 left-0 z-overlay w-full pointer-events-none *:pointer-events-auto pb-1 px-1"
