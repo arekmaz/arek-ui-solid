@@ -6,6 +6,7 @@ import { Buttons } from "./demo/button.stories";
 import { Comboboxes } from "./demo/combobox.stories";
 import { Inputs } from "./demo/input.stories";
 import { IconButtons } from "./demo/icon-button.stories";
+import { Accordions } from "./demo/accordion.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -19,18 +20,56 @@ function App() {
     document.body.classList.remove("dark");
   });
 
-  return (
-    <Center className="w-screen flex-1">
-      <p class="text-2xl text-center font-semibold">Arek UI - Solid {mode()}</p>
+  const renderComponents = () => {
+    return (
       <VStack
         spacing={5}
-        className="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
+        class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
       >
         <Buttons />
-        <Inputs />
+        {/* <Checkboxes /> */}
         <Comboboxes />
+        {/* <Selects /> */}
+        {/* <DatePickers /> */}
         <IconButtons />
+        <Inputs />
+        {/* <InputGroups /> */}
+        <Accordions />
+        {/* <Alerts /> */}
+        {/* <Dialogs /> */}
+        {/* <Avatars /> */}
+        {/* <Badges /> */}
+        {/* <Calendars /> */}
+        {/* <Cards /> */}
+        {/* <Collapsibles /> */}
+        {/* <TagsInputs /> */}
+        {/* <ContextMenus /> */}
+        {/* <HoverCards /> */}
+        {/* <Drawers /> */}
+        {/* <Menus /> */}
+        {/* <Paginations /> */}
+        {/* <Popovers /> */}
+        {/* <RadioGroups /> */}
+        {/* <ScrollAreas /> */}
+        {/* <Separators /> */}
+        {/* <Skeletons /> */}
+        {/* <ToggleGroups /> */}
+        {/* <Switches /> */}
+        {/* <Textareas /> */}
+        {/* <TabsStories /> */}
+        {/* <Tooltips /> */}
+        {/* <Toasts /> */}
+        {/* <Sliders /> */}
+        {/* <Spinners /> */}
+        {/* <Tables /> */}
       </VStack>
+    );
+  };
+
+  return (
+    <Center class="w-screen flex-1">
+      <p class="text-2xl text-center font-semibold">Arek UI - Solid {mode()}</p>
+      {renderComponents()}
       <HStack
         class="fixed bottom-0 left-0 z-overlay w-full pointer-events-none *:pointer-events-auto pb-1 px-1"
         justify="between"
@@ -39,10 +78,10 @@ function App() {
           onClick={() => setMode((m) => (m === "light" ? "dark" : "light"))}
         >
           <Show when={mode() === "light"}>
-            <SunIcon />
+            <MoonIcon />
           </Show>
           <Show when={mode() === "dark"}>
-            <MoonIcon />
+            <SunIcon />
           </Show>
         </IconButton>
         <IconButton asChild>

@@ -74,10 +74,8 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
           }}
         >
           <C
-            as
-            any
             {...otherProps}
-            className={
+            class={
               hocProps.unstyled
                 ? (otherProps as any).class
                 : (slotStyles as any)[slot]({
@@ -108,7 +106,7 @@ export const createStyleContext = <R extends StyleRecipe>(recipe: R) => {
           unstyled || hocProps.unstyled
             ? (compProps as any).class
             : slotStyles?.[slot]({
-                className: cn(classes[slot], (compProps as any).class),
+                class: cn(classes[slot], (compProps as any).class),
               }),
       });
 
