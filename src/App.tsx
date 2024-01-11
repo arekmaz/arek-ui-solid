@@ -5,6 +5,7 @@ import { Center, HStack, VStack } from "./components/ui/stack";
 import { Buttons } from "./demo/button.stories";
 import { Comboboxes } from "./demo/combobox.stories";
 import { Inputs } from "./demo/input.stories";
+import { IconButtons } from "./demo/icon-button.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -28,6 +29,7 @@ function App() {
         <Buttons />
         <Inputs />
         <Comboboxes />
+        <IconButtons />
       </VStack>
       <HStack
         class="fixed bottom-0 left-0 z-overlay w-full pointer-events-none *:pointer-events-auto pb-1 px-1"
