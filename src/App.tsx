@@ -25,6 +25,7 @@ import { Paginations } from "./demo/pagination.stories";
 import { Popovers } from "./demo/popover.stories";
 import { RadioGroups } from "./demo/radio-group.stories";
 import { Skeletons } from "./demo/skeleton.stories";
+import { ToggleGroups } from "./demo/toggle-group.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -66,7 +67,7 @@ function App() {
         <Popovers />
         <RadioGroups />
         <Skeletons />
-        {/* <ToggleGroups /> */}
+        <ToggleGroups />
         {/* <Switches /> */}
         {/* <Textareas /> */}
         {/* <TabsStories /> */}
