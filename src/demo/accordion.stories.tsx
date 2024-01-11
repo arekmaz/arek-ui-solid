@@ -17,7 +17,7 @@ const Single = () => {
               <Accordion.Item value={item}>
                 <Accordion.ItemTrigger>
                   {item}
-                  <Accordion.ItemIndicator asChild>
+                  <Accordion.ItemIndicator>
                     <ChevronDownIcon />
                   </Accordion.ItemIndicator>
                 </Accordion.ItemTrigger>
@@ -48,7 +48,7 @@ const Collapsible = () => {
               <Accordion.Item value={item}>
                 <Accordion.ItemTrigger>
                   {item}
-                  <Accordion.ItemIndicator asChild>
+                  <Accordion.ItemIndicator>
                     <ChevronDownIcon />
                   </Accordion.ItemIndicator>
                 </Accordion.ItemTrigger>
@@ -79,7 +79,7 @@ const Disabled = () => {
               <Accordion.Item value={item} disabled={item === "disabled"}>
                 <Accordion.ItemTrigger>
                   {item}
-                  <Accordion.ItemIndicator asChild>
+                  <Accordion.ItemIndicator>
                     <ChevronDownIcon />
                   </Accordion.ItemIndicator>
                 </Accordion.ItemTrigger>

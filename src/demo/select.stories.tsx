@@ -7,7 +7,7 @@ import { Story } from "./storyHelpers";
 import { InputGroup } from "../components/ui/input-group";
 import { HStack } from "../components/ui/stack";
 
-export const MultipleSelect = () => {
+export const SingleSelect = () => {
   const [items, setItems] = createSignal(data);
 
   const handleChange = (e: any) => {
@@ -16,8 +16,8 @@ export const MultipleSelect = () => {
   };
 
   return (
-    <S items={items()} multiple>
-      <S.Label>Multiple select</S.Label>
+    <S items={items()}>
+      <S.Label>Single select</S.Label>
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
@@ -52,7 +52,7 @@ export const MultipleSelect = () => {
   );
 };
 
-export const SingleSelect = () => {
+export const MultipleSelect = () => {
   const [items, setItems] = createSignal(data);
 
   const handleChange = (e: any) => {
@@ -61,8 +61,8 @@ export const SingleSelect = () => {
   };
 
   return (
-    <S items={items()}>
-      <S.Label>Single select</S.Label>
+    <S items={items()} multiple>
+      <S.Label>Multiple select</S.Label>
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
