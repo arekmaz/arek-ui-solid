@@ -31,6 +31,8 @@ import { Textareas } from "./demo/textarea.stories";
 import { TabsStories } from "./demo/tabs.stories";
 import { Toasts } from "./demo/toast.stories";
 import { Sliders } from "./demo/slider.stories";
+import { Spinners } from "./demo/spinner.stories";
+import { Tables } from "./demo/table.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -79,8 +81,8 @@ function App() {
         <Tooltips />
         <Toasts />
         <Sliders />
-        {/* <Spinners /> */}
-        {/* <Tables /> */}
+        <Spinners />
+        <Tables />
 
         {/* react only at the moment */}
         {/* <Calendars /> */}
