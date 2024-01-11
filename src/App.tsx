@@ -17,6 +17,7 @@ import { Dialogs } from "./demo/dialog.stories";
 import { Avatars } from "./demo/avatar.stories";
 import { Badges } from "./demo/badge.stories";
 import { Cards } from "./demo/card.stories";
+import { TagsInputs } from "./demo/tags-input.stories";
 
 function App() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -50,8 +51,7 @@ function App() {
         <Avatars />
         <Badges />
         <Cards />
-        {/* <Collapsibles /> */}
-        {/* <TagsInputs /> */}
+        <TagsInputs />
         {/* <ContextMenus /> */}
         {/* <HoverCards /> */}
         {/* <Drawers /> */}
@@ -72,7 +72,9 @@ function App() {
         {/* <Spinners /> */}
         {/* <Tables /> */}
 
+        {/* react only at the moment */}
         {/* <Calendars /> */}
+        {/* <Collapsibles /> */}
       </VStack>
     );
   };
