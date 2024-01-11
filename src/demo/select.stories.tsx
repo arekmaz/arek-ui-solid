@@ -21,7 +21,7 @@ export const SingleSelect = () => {
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
-          <S.Indicator asChild>
+          <S.Indicator>
             <ChevronsUpDownIcon />
           </S.Indicator>
         </S.Trigger>
@@ -66,7 +66,7 @@ export const MultipleSelect = () => {
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
-          <S.Indicator asChild>
+          <S.Indicator>
             <ChevronsUpDownIcon />
           </S.Indicator>
         </S.Trigger>
@@ -111,7 +111,7 @@ export const WithError = () => {
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
-          <S.Indicator asChild>
+          <S.Indicator>
             <ChevronsUpDownIcon />
           </S.Indicator>
         </S.Trigger>
@@ -156,7 +156,7 @@ export const DisabledSelect = () => {
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
-          <S.Indicator asChild>
+          <S.Indicator>
             <ChevronsUpDownIcon />
           </S.Indicator>
         </S.Trigger>
@@ -198,7 +198,7 @@ export const WithGroupInput = () => {
       <S.Control>
         <S.Trigger>
           <S.ValueText placeholder="select a framework" />
-          <S.Indicator asChild>
+          <S.Indicator>
             <ChevronsUpDownIcon />
           </S.Indicator>
         </S.Trigger>

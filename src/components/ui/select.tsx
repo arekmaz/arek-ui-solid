@@ -18,7 +18,7 @@ const selectStyles = tv({
     label: "font-medium",
     control: "relative cursor-pointer bg-background",
     indicator:
-      "text-muted-foreground h-full absolute top-0 bottom-0 right-3 size-4",
+      "text-muted-foreground h-full absolute top-0 bottom-0 right-3 size-4 min-w-min min-h-min flex items-center [&>svg]:size-4",
     trigger: [
       ...inputClasses,
       "flex",

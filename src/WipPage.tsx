@@ -2,7 +2,6 @@ import { GithubIcon, MoonIcon, SunIcon } from "lucide-solid";
 import { Show, createEffect, createSignal } from "solid-js";
 import { IconButton } from "./components/ui/icon-button";
 import { Center, HStack, VStack } from "./components/ui/stack";
-import { Accordions } from "./demo/accordion.stories";
 import { Selects } from "./demo/select.stories";
 import { TabsStories } from "./demo/tabs.stories";
 
@@ -25,7 +24,6 @@ export function WipPage() {
         class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
       >
         <Selects />
-        <Accordions />
         <TabsStories />
       </VStack>
     );
