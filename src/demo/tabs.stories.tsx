@@ -3,7 +3,7 @@ import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
-import { Stack } from "../components/ui/stack";
+import { Center, Stack } from "../components/ui/stack";
 import { Tabs } from "../components/ui/tabs";
 import { Story } from "./storyHelpers";
 import { For } from "solid-js";
@@ -69,8 +69,10 @@ export const CustomIndicator = () => {
                 </Tabs.Trigger>
               )}
             </For>
-            <Tabs.Indicator asChild>
-              <CrosshairIcon class="opacity-50" />
+            <Tabs.Indicator>
+              <Center>
+                <CrosshairIcon class="opacity-50" />
+              </Center>
             </Tabs.Indicator>
           </Tabs.List>
           <Tabs.Content value="react">

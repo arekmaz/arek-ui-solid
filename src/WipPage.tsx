@@ -23,7 +23,6 @@ export function WipPage() {
         spacing={5}
         class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
       >
-        <Selects />
         <TabsStories />
       </VStack>
     );
