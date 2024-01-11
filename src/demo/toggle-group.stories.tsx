@@ -33,7 +33,7 @@ export const Demo = (props: ComponentProps<typeof ToggleGroup>) => {
           <UnderlineIcon />
         </ToggleGroup.Item>
       </ToggleGroup.Root>
-      <ToggleGroup.Root defaultValue={["left"]} {...props}>
+      <ToggleGroup.Root value={["left"]} {...props}>
         <ToggleGroup.Item value="left" aria-label="Align Left">
           <AlignLeftIcon />
         </ToggleGroup.Item>
