@@ -33,9 +33,9 @@ const CI = (props: ComponentProps<"svg">) => (
     <path
       d="M11.6666 3.5L5.24992 9.91667L2.33325 7"
       stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 );
