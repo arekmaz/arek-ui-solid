@@ -3,6 +3,7 @@ import { Show, createEffect, createSignal } from "solid-js";
 import { IconButton } from "./components/ui/icon-button";
 import { Center, HStack, VStack } from "./components/ui/stack";
 import { Spinners } from "./demo/spinner.stories";
+import { Sliders } from "./demo/slider.stories";
 
 export function WipPage() {
   const [mode, setMode] = createSignal<"dark" | "light">("light");
@@ -22,7 +23,7 @@ export function WipPage() {
         spacing={5}
         class="md:flex-row flex-wrap pb-20 justify-center pt-5 px-5"
       >
-        <Spinners />
+        <Sliders />
       </VStack>
     );
   };

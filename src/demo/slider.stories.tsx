@@ -1,4 +1,5 @@
 import { Slider, SliderProps } from "../components/ui/slider";
+import { VStack } from "../components/ui/stack";
 import { Story } from "./storyHelpers";
 import { createSignal } from "solid-js";
 
@@ -94,18 +95,16 @@ export const Range3 = (props: SliderProps) => {
 
 export const Sliders = () => {
   return (
-    <Story
-      title="sliders"
-      classes={{ content: "min-w-80 gap-10 pb-10" }}
-      componentFilename="slider"
-    >
-      <Single size="sm" />
-      <Single />
-      <Single size="lg" />
+    <Story title="sliders" componentFilename="slider">
+      <VStack class="min-w-80 gap-10 pb-10">
+        <Single size="sm" />
+        <Single />
+        <Single size="lg" />
 
-      <Range />
+        <Range />
 
-      <Range3 />
+        <Range3 />
+      </VStack>
     </Story>
   );
 };
